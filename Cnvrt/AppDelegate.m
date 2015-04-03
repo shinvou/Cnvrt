@@ -54,37 +54,26 @@
     [alert beginSheetModalForWindow:[self window] modalDelegate:nil didEndSelector:NULL contextInfo:nil];
 }
 
-- (BOOL)startAtLogin
-{
-    return [CNLaunchManager willStartAtLogin:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
-}
-
 - (void)openAtLoginToggled:(id)sender
 {
-    [self setStartAtLogin:![self startAtLogin]];
+    BOOL startsAtLogin = [[TKUtilities sharedInstance] startsAtLogin];
+    [[TKUtilities sharedInstance] setStartAtLoginEnabled:!startsAtLogin];
 }
 
-- (void)setStartAtLogin:(BOOL)enabled
+- (void)quitApp:(id)sender
 {
-    [self willChangeValueForKey:@"startAtLogin"];
-    [CNLaunchManager setStartAtLogin:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]] enabled:enabled];
-    [self didChangeValueForKey:@"startAtLogin"];
+    [NSApp terminate:self];
 }
 
 - (BOOL)validateUserInterfaceItem:(id <NSValidatedUserInterfaceItem>)item
 {
     if ([item action] == @selector(openAtLoginToggled:)) {
         if ([(NSMenuItem *)item respondsToSelector:@selector(setState:)]) {
-            [(NSMenuItem *)item setState:[self startAtLogin]];
+            [(NSMenuItem *)item setState:[[TKUtilities sharedInstance] startsAtLogin]];
         }
     }
     
     return YES;
-}
-
-- (void)quitApp:(id)sender
-{
-    [NSApp terminate:self];
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2017AA1ACE5983006F083C /* TKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2017A91ACE5983006F083C /* TKUtilities.m */; };
 		1C7FB59C1AC96F5700990E06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FB59B1AC96F5700990E06 /* AppDelegate.m */; };
 		1C7FB59E1AC96F5700990E06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FB59D1AC96F5700990E06 /* main.m */; };
 		1C7FB5A01AC96F5700990E06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C7FB59F1AC96F5700990E06 /* Images.xcassets */; };
@@ -14,7 +15,6 @@
 		1C7FB5AF1AC96F5700990E06 /* CnvrtTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7FB5AE1AC96F5700990E06 /* CnvrtTests.m */; };
 		1C7FB5B91AC96F5D00990E06 /* menubar.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1C7FB5B81AC96F5D00990E06 /* menubar.tiff */; };
 		1C86CCB41AC9EDAB00CC6926 /* menubar_highlighted.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1C86CCB31AC9EDAB00CC6926 /* menubar_highlighted.tiff */; };
-		1C86CCB71AC9F71B00CC6926 /* CNLaunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C86CCB61AC9F71B00CC6926 /* CNLaunchManager.m */; };
 		1CA1F7081ACA14A400217C29 /* CNImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1F7071ACA14A400217C29 /* CNImageView.m */; };
 		1CA1F70B1ACA1A8D00217C29 /* CNView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1F70A1ACA1A8D00217C29 /* CNView.m */; };
 /* End PBXBuildFile section */
@@ -30,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C2017A81ACE5983006F083C /* TKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKUtilities.h; sourceTree = "<group>"; };
+		1C2017A91ACE5983006F083C /* TKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKUtilities.m; sourceTree = "<group>"; };
 		1C7FB5951AC96F5700990E06 /* Cnvrt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cnvrt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7FB5991AC96F5700990E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C7FB59A1AC96F5700990E06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,8 +44,6 @@
 		1C7FB5AE1AC96F5700990E06 /* CnvrtTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CnvrtTests.m; sourceTree = "<group>"; };
 		1C7FB5B81AC96F5D00990E06 /* menubar.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menubar.tiff; sourceTree = "<group>"; };
 		1C86CCB31AC9EDAB00CC6926 /* menubar_highlighted.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menubar_highlighted.tiff; sourceTree = "<group>"; };
-		1C86CCB51AC9F71B00CC6926 /* CNLaunchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNLaunchManager.h; sourceTree = "<group>"; };
-		1C86CCB61AC9F71B00CC6926 /* CNLaunchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNLaunchManager.m; sourceTree = "<group>"; };
 		1CA1F7061ACA14A400217C29 /* CNImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNImageView.h; sourceTree = "<group>"; };
 		1CA1F7071ACA14A400217C29 /* CNImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNImageView.m; sourceTree = "<group>"; };
 		1CA1F7091ACA1A8D00217C29 /* CNView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNView.h; sourceTree = "<group>"; };
@@ -68,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C2017A71ACE5983006F083C /* TKUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				1C2017A81ACE5983006F083C /* TKUtilities.h */,
+				1C2017A91ACE5983006F083C /* TKUtilities.m */,
+			);
+			path = TKUtilities;
+			sourceTree = "<group>";
+		};
 		1C7FB58C1AC96F5700990E06 = {
 			isa = PBXGroup;
 			children = (
@@ -89,14 +98,13 @@
 		1C7FB5971AC96F5700990E06 /* Cnvrt */ = {
 			isa = PBXGroup;
 			children = (
+				1C2017A71ACE5983006F083C /* TKUtilities */,
 				1C7FB59A1AC96F5700990E06 /* AppDelegate.h */,
 				1C7FB59B1AC96F5700990E06 /* AppDelegate.m */,
 				1CA1F7091ACA1A8D00217C29 /* CNView.h */,
 				1CA1F70A1ACA1A8D00217C29 /* CNView.m */,
 				1CA1F7061ACA14A400217C29 /* CNImageView.h */,
 				1CA1F7071ACA14A400217C29 /* CNImageView.m */,
-				1C86CCB51AC9F71B00CC6926 /* CNLaunchManager.h */,
-				1C86CCB61AC9F71B00CC6926 /* CNLaunchManager.m */,
 				1C7FB5A11AC96F5700990E06 /* MainMenu.xib */,
 				1C7FB59F1AC96F5700990E06 /* Images.xcassets */,
 				1C7FB5981AC96F5700990E06 /* Supporting Files */,
@@ -234,8 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C7FB59E1AC96F5700990E06 /* main.m in Sources */,
+				1C2017AA1ACE5983006F083C /* TKUtilities.m in Sources */,
 				1CA1F7081ACA14A400217C29 /* CNImageView.m in Sources */,
-				1C86CCB71AC9F71B00CC6926 /* CNLaunchManager.m in Sources */,
 				1C7FB59C1AC96F5700990E06 /* AppDelegate.m in Sources */,
 				1CA1F70B1ACA1A8D00217C29 /* CNView.m in Sources */,
 			);

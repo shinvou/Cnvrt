@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 #import "CNView.h"
-#import "CNLaunchManager.h"
+#import "TKUtilities/TKUtilities.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate>
 
